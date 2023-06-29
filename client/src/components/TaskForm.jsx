@@ -30,7 +30,7 @@ const TaskForm = () => {
 
     if(editing){
 // console.log('updata')
- await fetch(`http://localhost:8000/tasks/${params.id}`,{
+ await fetch(`https://peck-start-production.up.railway.app/tasks/${params.id}`,{
   method: "PUT",
   
   headers:{
@@ -41,7 +41,7 @@ const TaskForm = () => {
 // const data = await response.json();
 // console.log(data)
     }else{
-       await fetch("http://localhost:8000/tasks", {
+       await fetch("https://peck-start-production.up.railway.app/tasks", {
         method: "POST",
         body: JSON.stringify(task),
         headers:{
@@ -62,7 +62,7 @@ const TaskForm = () => {
 
   //para traer una tarea al edit
   const loadTask = async (id) =>{
-   const res = await fetch(`http://localhost:8000/tasks/${id}`)
+   const res = await fetch(`https://peck-start-production.up.railway.app/tasks/${id}`)
    const data = await res.json();
   //  console.log(data)
   setTask({title:data.title, description:data.description})

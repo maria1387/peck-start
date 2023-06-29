@@ -8,7 +8,7 @@ const TaskList = () => {
   const navigate = useNavigate()
 
   const loadTasks = async () => {
-    const response = await fetch("http://localhost:8000/tasks");
+    const response = await fetch("https://peck-start-production.up.railway.app/tasks");
     const data = await response.json();
     // console.log(data)
     setTasks(data);
@@ -18,7 +18,7 @@ const TaskList = () => {
    const  handleDelete =async (id)=>{
    try{
      //eliminar backend
-  await fetch(`http://localhost:8000/tasks/${id}`,{
+  await fetch(`https://peck-start-production.up.railway.app//tasks/${id}`,{
     method:"DELETE",
         });
     
