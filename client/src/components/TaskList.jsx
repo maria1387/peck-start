@@ -18,7 +18,7 @@ const TaskList = () => {
    const  handleDelete =async (id)=>{
    try{
      //eliminar backend
-  await fetch(`https://peck-start-production.up.railway.app//tasks/${id}`,{
+  await fetch(`https://peck-start-production.up.railway.app/tasks/${id}`,{
     method:"DELETE",
         });
     
